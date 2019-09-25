@@ -32,4 +32,7 @@ export default {
   .is-complete {
     text-decoration: line-through;
   }
+  .list-group {
+    margin-bottom: 2px;
+}
 </style>
