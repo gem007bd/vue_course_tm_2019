@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <Todos v-bind:todos="todos" />
+    <Header/>
+    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
   </div>
 </template>
 
 <script>
 import Todos from './components/Todos';
+import Header from './components/layout/Header';
 
 export default {
   name: 'app',
   components: {
-    Todos
+    Todos,
+    Header
   }, 
   data() {
     return {
@@ -33,18 +36,12 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    deleteTodo(id) {
+      this.todos = this.todos.filter(todo => todo.id !== id);
+    }
   }
 }
 </script>
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  line-height: 1.4;
-}
-</style>
