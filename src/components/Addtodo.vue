@@ -2,7 +2,7 @@
     <div class="row">
         <form class="col-sm-12" @submit="addTodo">
             <div class="input-group mb-3">
-            <input type="text" v-model="title" class="form-control" placeholder="Todo">
+            <input type="text" v-model="title" class="form-control" placeholder="Todo" required>
             <div class="input-group-append">
                 <button class="btn btn-secondary" type="submit">Submit</button>
             </div>
