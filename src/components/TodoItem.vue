@@ -8,7 +8,7 @@
               </div>
             <div class="col-sm-10">{{todo.title}}</div>
             <div class="col-sm-1">
-              <span class="oi oi-x" @click="$emit('del-todo', todo.id)" ></span>
+              <span class="oi oi-x cursor-pointer" @click="$emit('del-todo', todo.id)" ></span>
             </div>
           </div>
         </li>       
@@ -34,5 +34,8 @@ export default {
   }
   .list-group {
     margin-bottom: 2px;
-}
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
 </style>

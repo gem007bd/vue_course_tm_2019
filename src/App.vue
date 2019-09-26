@@ -5,7 +5,6 @@
       <Addtodo v-on:add-todo="addTodo"/>
       <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
     </div>
-    
   </div>
 </template>
 
@@ -14,6 +13,7 @@ import Todos from './components/Todos';
 import Header from './components/layout/Header';
 import Addtodo from './components/Addtodo';
 import axios from 'axios';
+
 
 export default {
   name: 'app',
